@@ -1,15 +1,19 @@
 class numberToWord {
     convert (number) {
-        let word = "";
-        if(number === 1) {
-            word = 'One'
-        } else if (number === 0){
-            word = 'Zero';
-        } else {
-            word = 'Two';
-        }         
-        
-        return word;
+        const singleDigitWordList = {
+            0: 'Zero',
+            1: 'One',           
+            2: 'Two',
+            3: 'Three',
+            4: 'Four',
+            5: 'Five',
+            6: 'Six',
+            7: 'Seven',
+            8: 'Eight',
+            9: 'Nine'
+        };
+
+        return singleDigitWordList[number];
     }    
 }
 
