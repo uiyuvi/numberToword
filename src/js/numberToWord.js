@@ -14,17 +14,26 @@ class numberToWord {
         };
         let word;
 
-        word = singleDigitWordList[number] || this.converDoubleDigitNumber(number);
+        word = singleDigitWordList[number] || this.convertDoubleDigitNumberUntil20(number);
 
         return word;
     }
 
-    converDoubleDigitNumber(number) {
-        if(number === 10) {
-            return "Ten";
-        } else {
-            return "Eleven"
+    convertDoubleDigitNumberUntil20(number) {
+        const doubleDigitWordListUntil20 = {
+            10: "Ten",
+            11: "Eleven",
+            12: "Twelve",
+            13: "Thirteen",
+            14: "Fourteen",
+            15: "Fifteen",
+            16: "Sixteen",
+            17: "Seventeen",
+            18: "Eighteen",
+            19: "Nineteen",
+            20: "Twenty"
         }
+        return doubleDigitWordListUntil20[number];
     }
 }
 
