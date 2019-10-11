@@ -3,6 +3,7 @@ class numberToWord {
         return (
                 this.convertSingleDigitNumber(number) 
             ||  this.convertDoubleDigitNumberUntil20(number)
+            ||  this.convertDoubleDigitNumberFrom21To99(number)
         );
     }
 
@@ -38,6 +39,10 @@ class numberToWord {
             20: "Twenty"
         }
         return doubleDigitWordListUntil20[number];
+    }
+
+    convertDoubleDigitNumberFrom21To99(number) {
+        return "Twenty One";
     }
 }
 

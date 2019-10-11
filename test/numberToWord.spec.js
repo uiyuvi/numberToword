@@ -40,4 +40,12 @@ describe('Numeber to Word', function () {
             assertEqual('Eleven', output);
         });
     })
+
+    describe('Convert Double digit numbers from 21 to 99', () => {
+        it('should convert to "Twenty One" for number 21', () => {
+            output = convert(21);
+
+            assertEqual('Twenty One', output);
+        });
+    });
 });
