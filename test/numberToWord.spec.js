@@ -26,4 +26,12 @@ describe('Numeber to Word', function () {
             assertEqual('Two', output)
         });
     })
+
+    describe('Convert Double digit numbers', () => {
+        it('should convert to "Ten" for number 10', () => {
+            output = convert(10);
+
+            assertEqual('Ten', output);
+        });
+    })
 });

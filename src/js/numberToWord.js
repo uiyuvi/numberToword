@@ -13,7 +13,7 @@ class numberToWord {
             9: 'Nine'
         };
 
-        return singleDigitWordList[number];
+        return singleDigitWordList[number] || 'Ten';
     }    
 }
 
