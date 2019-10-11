@@ -7,21 +7,23 @@ describe('Numeber to Word', function () {
     const convert = (number) => numberToWord.convert(number);
     const assertEqual = (actual, expected) => assert.equal(actual, expected);
     
-    it('Should return "Zero" for number 0', function () {
-        output = convert(0);
-
-        assertEqual('Zero', output);
-    });
+    describe('Convert single digit Numbers', ()=> {
+        it('Should return "Zero" for number 0', function () {
+            output = convert(0);
     
-    it('should convert to "One" for number 1', () => {        
-        output = convert(1);
+            assertEqual('Zero', output);
+        });
         
-        assertEqual('One', output);
-    });
-
-    it('should convert to "Two" for number 2', () => {
-        output = convert(2);
-
-        assertEqual('Two', output)
-    });
+        it('should convert to "One" for number 1', () => {        
+            output = convert(1);
+            
+            assertEqual('One', output);
+        });
+    
+        it('should convert to "Two" for number 2', () => {
+            output = convert(2);
+    
+            assertEqual('Two', output)
+        });
+    })
 });
