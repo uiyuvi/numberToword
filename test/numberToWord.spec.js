@@ -4,16 +4,18 @@ const NumberToWord = require("../src/js/numberToWord");
 describe('Numeber to Word', function () {
     let output;
     const numberToWord = new NumberToWord();
-
+    const convert = (number) => numberToWord.convert(number);
+    const assertEqual = (actual, expected) => assert.equal(actual, expected);
+    
     it('Should return "Zero" for number 0', function () {
-        output = numberToWord.convert(0);
+        output = convert(0);
 
-        assert.equal('Zero', output);
+        assertEqual('Zero', output);
     });
     
     it('should convert to "One" for number 1', () => {        
-        output = numberToWord.convert(1);
+        output = convert(1);
         
-        assert.equal('One', output);
+        assertEqual('One', output);
     });
 });
