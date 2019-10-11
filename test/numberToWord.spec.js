@@ -27,7 +27,7 @@ describe('Numeber to Word', function () {
         });
     })
 
-    describe('Convert Double digit numbers unitl 20', () => {
+    describe('Convert Double digit numbers until 20', () => {
         it('should convert to "Ten" for number 10', () => {
             output = convert(10);
 
@@ -40,5 +40,4 @@ describe('Numeber to Word', function () {
             assertEqual('Eleven', output);
         });
     })
-    
 });

@@ -1,5 +1,12 @@
 class numberToWord {
-    convert (number) {
+    convert (number) {   
+        return (
+                this.convertSingleDigitNumber(number) 
+            ||  this.convertDoubleDigitNumberUntil20(number)
+        );
+    }
+
+    convertSingleDigitNumber(number) {
         const singleDigitWordList = {
             0: 'Zero',
             1: 'One',           
@@ -12,11 +19,8 @@ class numberToWord {
             8: 'Eight',
             9: 'Nine'
         };
-        let word;
 
-        word = singleDigitWordList[number] || this.convertDoubleDigitNumberUntil20(number);
-
-        return word;
+        return singleDigitWordList[number]
     }
 
     convertDoubleDigitNumberUntil20(number) {
