@@ -18,4 +18,10 @@ describe('Numeber to Word', function () {
         
         assertEqual('One', output);
     });
+
+    it('should convert to "Two" for number 2', () => {
+        output = convert(2);
+
+        assertEqual('Two', output)
+    });
 });
