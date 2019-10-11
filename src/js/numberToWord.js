@@ -12,9 +12,20 @@ class numberToWord {
             8: 'Eight',
             9: 'Nine'
         };
+        let word;
 
-        return singleDigitWordList[number] || 'Ten';
-    }    
+        word = singleDigitWordList[number] || this.converDoubleDigitNumber(number);
+
+        return word;
+    }
+
+    converDoubleDigitNumber(number) {
+        if(number === 10) {
+            return "Ten";
+        } else {
+            return "Eleven"
+        }
+    }
 }
 
 module.exports = numberToWord;

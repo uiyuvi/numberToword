@@ -33,5 +33,11 @@ describe('Numeber to Word', function () {
 
             assertEqual('Ten', output);
         });
+
+        it('should convert to "Eleven" for number 11', () => {
+            output = convert(11);
+
+            assertEqual('Eleven', output);
+        });
     })
 });
