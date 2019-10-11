@@ -27,7 +27,7 @@ describe('Numeber to Word', function () {
         });
     })
 
-    describe('Convert Double digit numbers until 20', () => {
+    describe('Convert Double digit numbers until 19', () => {
         it('should convert to "Ten" for number 10', () => {
             output = convert(10);
 
@@ -41,7 +41,7 @@ describe('Numeber to Word', function () {
         });
     })
 
-    describe('Convert Double digit numbers from 21 to 99', () => {
+    describe('Convert Double digit numbers from 20 to 99', () => {
         it('should convert to "Twenty One" for number 21', () => {
             output = convert(21);
 

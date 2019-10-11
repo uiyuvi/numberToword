@@ -2,7 +2,7 @@ class numberToWord {
     convert (number) {   
         return (
                 this.convertSingleDigitNumber(number) 
-            ||  this.convertDoubleDigitNumberUntil20(number)
+            ||  this.convertDoubleDigitNumberUntil19(number)
             ||  this.convertDoubleDigitNumberFrom21To99(number)
         );
     }
@@ -24,8 +24,8 @@ class numberToWord {
         return singleDigitWordList[number]
     }
 
-    convertDoubleDigitNumberUntil20(number) {
-        const doubleDigitWordListUntil20 = {
+    convertDoubleDigitNumberUntil19(number) {
+        const doubleDigitWordListUntil19 = {
             10: "Ten",
             11: "Eleven",
             12: "Twelve",
@@ -35,10 +35,9 @@ class numberToWord {
             16: "Sixteen",
             17: "Seventeen",
             18: "Eighteen",
-            19: "Nineteen",
-            20: "Twenty"
+            19: "Nineteen"
         }
-        return doubleDigitWordListUntil20[number];
+        return doubleDigitWordListUntil19[number];
     }
 
     convertDoubleDigitNumberFrom21To99(number) {
