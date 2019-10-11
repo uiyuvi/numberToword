@@ -1,6 +1,6 @@
 class numberToWord {
     convert (number) {
-        let word = "Zero";
+        let word = (number === 1) ? "One": "Zero";
         
         return word;
     }    

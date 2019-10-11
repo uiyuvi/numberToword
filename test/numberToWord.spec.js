@@ -10,4 +10,12 @@ describe('Numeber to Word', function () {
 
         assert.equal('Zero', output);
     });
+    it('should convert to "One" for number 1', () => {
+        let output;
+        const numberToWord = new NumberToWord();
+
+        output = numberToWord.convert(1);
+        
+        assert.equal('One', output);
+    });
 });
