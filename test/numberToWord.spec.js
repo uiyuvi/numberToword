@@ -77,7 +77,7 @@ describe('Numeber to Word', function () {
             assertEqual('One Hundred', output);
         });
 
-        xit('should convert to "One Hundred One" for number 101', () => {
+        it('should convert to "One Hundred One" for number 101', () => {
             output = convert(101);
 
             assertEqual('One Hundred One', output);
