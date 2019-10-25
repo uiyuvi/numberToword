@@ -5,6 +5,7 @@ class numberToWord {
             || this.convertDoubleDigitNumberUntil19(number)
             || this.convertDoubleDigitNumberFrom20To99(number)
             || this.convertTripleDigitNumberFrom100To999(number)
+            || this.convertFourDigitNumberFrom1000To9999()
         );
     }
 
@@ -41,10 +42,10 @@ class numberToWord {
         return doubleDigitWordListUntil19[number];
     }
 
-    convertDoubleDigitNumberFrom20To99(number) {    
-        if(number > 99){
+    convertDoubleDigitNumberFrom20To99(number) {
+        if (number > 99) {
             return;
-        }    
+        }
         const tensDigitWordFrom20To90 = {
             20: "Twenty",
             30: "Thirty",
@@ -65,14 +66,21 @@ class numberToWord {
     }
 
     convertTripleDigitNumberFrom100To999(number) {
+        if (number > 999) {
+            return;
+        }
         const numberInString = number.toString();
         const hundredsPosition = numberInString[0];
         const moduloOf100 = number % 100;
-        if(moduloOf100 === 0){
+        if (moduloOf100 === 0) {
             return this.convertSingleDigitNumber(hundredsPosition) + " Hundred";
         }
 
-        return this.convertSingleDigitNumber(hundredsPosition) + " Hundred " +  this.convert(moduloOf100);
+        return this.convertSingleDigitNumber(hundredsPosition) + " Hundred " + this.convert(moduloOf100);
+    }
+
+    convertFourDigitNumberFrom1000To9999() {
+        return "One Thousand";
     }
 }
 

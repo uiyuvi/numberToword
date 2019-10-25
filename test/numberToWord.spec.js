@@ -89,4 +89,12 @@ describe('Numeber to Word', function () {
             assertEqual('Seven Hundred Eighty Six', output);
         });
     });
+
+    describe('Convert Triple digit numbers from 1000 to 9999', () => {
+        it('should convert to "One Thousand" for number 1000', () => {
+            output = convert(1000);
+
+            assertEqual('One Thousand', output);
+        });
+    });
 });
