@@ -56,13 +56,13 @@ class numberToWord {
             80: "Eighty",
             90: "Ninety"
         }
-        if (number % 10 === 0) {
+        const moduloOf10 = number % 10;
+        if (moduloOf10 === 0) {
             return tensDigitWordFrom20To90[number];
         }
         const numberInString = number.toString();
         const tensPosition = numberInString[0] + 0;
-        const onesPosition = numberInString[1];
-        return tensDigitWordFrom20To90[tensPosition] + " " + this.convertSingleDigitNumber(onesPosition)
+        return tensDigitWordFrom20To90[tensPosition] + " " + this.convert(moduloOf10)
     }
 
     convertTripleDigitNumberFrom100To999(number) {
