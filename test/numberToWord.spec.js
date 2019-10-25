@@ -96,5 +96,11 @@ describe('Numeber to Word', function () {
 
             assertEqual('One Thousand', output);
         });
+
+        it('should convert to "One Thousand One" for number 1001', () => {
+            output = convert(1001);
+
+            assertEqual('One Thousand One', output);
+        });
     });
 });

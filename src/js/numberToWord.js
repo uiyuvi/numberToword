@@ -5,7 +5,7 @@ class numberToWord {
             || this.convertDoubleDigitNumberUntil19(number)
             || this.convertDoubleDigitNumberFrom20To99(number)
             || this.convertTripleDigitNumberFrom100To999(number)
-            || this.convertFourDigitNumberFrom1000To9999()
+            || this.convertFourDigitNumberFrom1000To9999(number)
         );
     }
 
@@ -79,8 +79,8 @@ class numberToWord {
         return this.convertSingleDigitNumber(hundredsPosition) + " Hundred " + this.convert(moduloOf100);
     }
 
-    convertFourDigitNumberFrom1000To9999() {
-        return "One Thousand";
+    convertFourDigitNumberFrom1000To9999(number) {
+        return (number === 1000) ? "One Thousand" : "One Thousand One";
     }
 }
 
