@@ -82,5 +82,11 @@ describe('Numeber to Word', function () {
 
             assertEqual('One Hundred One', output);
         });
+
+        it('should convert to "Seven Hundred Eighty Six" for number 786', () => {
+            output = convert(786);
+
+            assertEqual('Seven Hundred Eighty Six', output);
+        });
     });
 });
