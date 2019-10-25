@@ -65,7 +65,14 @@ class numberToWord {
     }
 
     convertTripleDigitNumberFrom100To999(number) {
-        return (number === 100) ? "One Hundred" : "One Hundred One"
+        const numberInString = number.toString();
+        const hundredsPosition = numberInString[0];
+        const moduloOf100 = number % 100;
+        if(moduloOf100 === 0){
+            return this.convertSingleDigitNumber(hundredsPosition) + " Hundred";
+        }
+
+        return this.convertSingleDigitNumber(hundredsPosition) + " Hundred " +  this.convert(moduloOf100);
     }
 }
 
