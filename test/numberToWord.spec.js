@@ -6,25 +6,25 @@ describe('Numeber to Word', function () {
     const numberToWord = new NumberToWord();
     const convert = (number) => numberToWord.convert(number);
     const assertEqual = (actual, expected) => assert.equal(actual, expected);
-    
-    describe('Convert single digit Numbers', ()=> {        
+
+    describe('Convert single digit Numbers', () => {
         let testValues = [
-            {number: 0, expected: "Zero"},
-            {number: 1, expected: "One"},
-            {number: 2, expected: "Two"},
-            {number: 3, expected: "Three"},
-            {number: 4, expected: "Four"},
-            {number: 5, expected: "Five"},
-            {number: 6, expected: "Six"},
-            {number: 7, expected: "Seven"},
-            {number: 8, expected: "Eight"},
-            {number: 9, expected: "Nine"}
+            { number: 0, expected: "Zero" },
+            { number: 1, expected: "One" },
+            { number: 2, expected: "Two" },
+            { number: 3, expected: "Three" },
+            { number: 4, expected: "Four" },
+            { number: 5, expected: "Five" },
+            { number: 6, expected: "Six" },
+            { number: 7, expected: "Seven" },
+            { number: 8, expected: "Eight" },
+            { number: 9, expected: "Nine" }
         ]
-        
+
         testValues.forEach(testValue => {
             it(`Should return ${testValue.expected} for ${testValue.number}`, function () {
                 output = convert(testValue.number);
-        
+
                 assertEqual(testValue.expected, output);
             });
         });
@@ -71,10 +71,16 @@ describe('Numeber to Word', function () {
     });
 
     describe('Convert Triple digit numbers from 100 to 999', () => {
-        it('should convert to "Hundred" for number 100', () => {
+        it('should convert to "One Hundred" for number 100', () => {
             output = convert(100);
 
-            assertEqual('Hundred', output);
+            assertEqual('One Hundred', output);
+        });
+
+        xit('should convert to "One Hundred One" for number 101', () => {
+            output = convert(101);
+
+            assertEqual('One Hundred One', output);
         });
     });
 });

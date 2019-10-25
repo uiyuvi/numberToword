@@ -41,7 +41,7 @@ class numberToWord {
         return doubleDigitWordListUntil19[number];
     }
 
-    convertDoubleDigitNumberFrom20To99(number) {
+    convertDoubleDigitNumberFrom20To99(number) {        
         const tensDigitWordFrom20To90 = {
             20: "Twenty",
             30: "Thirty",
@@ -62,7 +62,7 @@ class numberToWord {
     }
 
     convertTripleDigitNumberFrom100To999() {
-        return "Hundred"
+        return "One Hundred"
     }
 }
 
