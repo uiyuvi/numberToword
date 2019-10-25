@@ -47,5 +47,11 @@ describe('Numeber to Word', function () {
 
             assertEqual('Twenty One', output);
         });
+
+        it('should convert to "Twenty" for number 20', () => {
+            output = convert(20);
+
+            assertEqual('Twenty', output);
+        });
     });
 });
