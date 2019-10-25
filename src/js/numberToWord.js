@@ -54,7 +54,10 @@ class numberToWord {
         if(number % 10 === 0){
             return tensDigitWordFrom20To90[number];
         }
-        return "Twenty One";
+        const numberInString = number.toString();
+        const tensPosition = numberInString[0] + 0;
+        const onesPosition = numberInString[1];
+        return tensDigitWordFrom20To90[tensPosition] + " " + this.convertSingleDigitNumber(onesPosition)        
     }
 }
 
