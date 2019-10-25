@@ -62,5 +62,19 @@ describe('Numeber to Word', function () {
 
             assertEqual('Thirty', output);
         });
+
+        it('should convert to "Seventy Eight" for number 78', () => {
+            output = convert(78);
+
+            assertEqual('Seventy Eight', output);
+        });
+    });
+
+    describe('Convert Triple digit numbers from 100 to 999', () => {
+        it('should convert to "Hundred" for number 100', () => {
+            output = convert(100);
+
+            assertEqual('Hundred', output);
+        });
     });
 });
