@@ -41,8 +41,11 @@ class numberToWord {
     }
 
     convertDoubleDigitNumberFrom20To99(number) {
-        if(number === 20){
-            return "Twenty";
+        const tensDigitWordFrom20To90 ={
+            20: "Twenty"
+        }
+        if(number % 10 === 0){
+            return tensDigitWordFrom20To90[number];
         }
         return "Twenty One";
     }
