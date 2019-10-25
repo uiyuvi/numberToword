@@ -80,7 +80,13 @@ class numberToWord {
     }
 
     convertFourDigitNumberFrom1000To9999(number) {
-        return (number === 1000) ? "One Thousand" : "One Thousand One";
+        const numberInString = number.toString();
+        const thousandsPosition = numberInString[0];
+        const moduloOf1000 = number % 1000;
+        if (moduloOf1000 === 0) {
+            return this.convertSingleDigitNumber(thousandsPosition) + " Thousand";
+        }
+        return this.convertSingleDigitNumber(thousandsPosition) + " Thousand " + this.convert(moduloOf1000);
     }
 }
 
