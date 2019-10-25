@@ -7,23 +7,26 @@ describe('Numeber to Word', function () {
     const convert = (number) => numberToWord.convert(number);
     const assertEqual = (actual, expected) => assert.equal(actual, expected);
     
-    describe('Convert single digit Numbers', ()=> {
-        it('Should return "Zero" for number 0', function () {
-            output = convert(0);
-    
-            assertEqual('Zero', output);
-        });
+    describe('Convert single digit Numbers', ()=> {        
+        let testValues = [
+            {number: 0, expected: "Zero"},
+            {number: 1, expected: "One"},
+            {number: 2, expected: "Two"},
+            {number: 3, expected: "Three"},
+            {number: 4, expected: "Four"},
+            {number: 5, expected: "Five"},
+            {number: 6, expected: "Six"},
+            {number: 7, expected: "Seven"},
+            {number: 8, expected: "Eight"},
+            {number: 9, expected: "Nine"}
+        ]
         
-        it('should convert to "One" for number 1', () => {        
-            output = convert(1);
-            
-            assertEqual('One', output);
-        });
-    
-        it('should convert to "Two" for number 2', () => {
-            output = convert(2);
-    
-            assertEqual('Two', output)
+        testValues.forEach(testValue => {
+            it(`Should return ${testValue.expected} for ${testValue.number}`, function () {
+                output = convert(testValue.number);
+        
+                assertEqual(testValue.expected, output);
+            });
         });
     })
 
